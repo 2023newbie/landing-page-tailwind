@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url('../images/bg-header-mobile.png');
+  }
+}
+
+@layer base {
+  h3 {
+    @apply text-4xl md:text-5xl font-bold text-darkGrayishBlue mb-8
+  }
+  h4 {
+    @apply font-bold text-darkGrayishBlue text-2xl mb-2
+  }
+  section {
+    @apply text-center my-40
+  }
+  a {
+    @apply hover:text-[#26bba4]
+  }
+}
+
+.btn {
+  @apply py-4 px-8 rounded-full duration-200 hover:brightness-125 text-xl text-slate-50
+}
+
+.paragraph {
+  @apply mx-auto text-xl text-grayishBlue
+}

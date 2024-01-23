@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  --tw-gradient-stops: 
+} */
+
+#hero {
+  background-image: url('../images/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero {
+    background-image: url('../images/desktop/image-hero.jpg')
+  }
+}
+
+.btn-see-all {
+  @apply font-alata tracking-widest font-semibold border-2 py-2 px-8 border-slate-900 hover:text-slate-50 hover:border-slate-900 hover:bg-slate-900 transition
+}
+
+.item-gradient {
+  @apply absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b
+}
+
+.desc-feature {
+  @apply absolute z-10 left-0 bottom-0 p-4 text-2xl text-slate-50 font-light max-w-48 group-hover:scale-110 transition group-hover:text-slate-900
+}
+
+.overlay-img {
+  @apply absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70
+}
+
+.top, .bottom, .middle {
+  @apply w-6 h-0.5 bg-slate-50 rounded
+}
+
+.middle {
+  @apply my-[6px]
+}
+
+.open {
+  transform: rotate(90deg)
+}
+
+.open .top {
+  transform: rotate(45deg) translateX(1px);
+}
+
+.open .middle {
+  display: none;
+}
+
+.open .bottom {
+  transform: rotate(-45deg) translateX(1px);
+}

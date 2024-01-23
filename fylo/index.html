@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="js/script.js" defer></script> -->
+    <title>Fylo Website</title>
+  </head>
+  <body class="font-opensans dark:text-slate-50 dark:bg-darkBlue">
+
+    <header>
+      <div
+        class="container flex flex-col md:flex-row justify-between items-center my-8 md:py-0"
+      >
+        <div
+          class="bg-logo-light-mode dark:bg-logo-dark-mode w-48 h-16 bg-no-repeat"
+        ></div>
+        <div class="flex gap-8 items-center mt-4">
+          <a class="hover:text-accentCyan" href="#features">Features</a>
+          <a class="hover:text-accentCyan" href="#testimonials">Testimonials</a>
+          <button
+            id="mode-screen"
+            class="p-2 focus:ring-4 focus:ring-slate-200 rounded-lg hover:bg-slate-100"
+          >
+            <img
+              class="dark:hidden w-5 h-5"
+              src="./images/moon.svg"
+              alt="logo light mode"
+            />
+            <img
+              class="hidden dark:block w-5 h-5"
+              src="./images/sun.svg"
+              alt="logo dark mode"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-curvy-light-mode dark:bg-curvy-dark-mode pb-48 bg-contain bg-bottom bg-no-repeat">
+      <div class="container flex flex-col items-center">
+        <img class="mb-16" src="./images/illustration-intro.png" alt="intro illustration">
+        <h2 class="max-w-3xl text-center font-bold text-3xl my-8 leading-10">All your files in one secure location, assessible anywhere.</h2>
+        <p class="max-w-sm md:max-w-lg text-center text-sm md:text-base">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+        <button class="py-3 px-12 rounded-full bg-accentCyan mt-8">Get Started</button>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  const btnMode = document.getElementById("mode-screen")
+  btnMode.addEventListener('click', () => {
+    console.log("btn work")
+    document.documentElement.classList.toggle('dark')
+  })
+</script>
