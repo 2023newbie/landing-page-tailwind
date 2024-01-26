@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  @apply max-w-md mx-auto p-4;
+  @apply max-w-md md:max-w-6xl mx-auto p-4;
 }
 
 .btn {
@@ -50,4 +50,22 @@ body {
   width: 200px;
   height: 3px;
   @apply bg-softRed;
+}
+
+.icon {
+  @apply rotate-0;
+}
+
+.open .icon {
+  @apply transition text-softRed rotate-180;
+}
+
+.open > p {
+  @apply block;
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg)
+  brightness(101%) contrast(96%);
+  @apply transition;
 }
